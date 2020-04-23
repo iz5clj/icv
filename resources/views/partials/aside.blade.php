@@ -15,6 +15,18 @@
                 </a>
             </li>
             <li>
+                <a class="nav-link" href="{{ route('message.index') }}">
+                    <span class="material-icons mr-1" style="vertical-align: middle;">note</span>
+                    <p>Messages</p>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link" href="{{ route('post.index') }}">
+                    <span class="material-icons mr-1" style="vertical-align: middle;">note</span>
+                    <p>Posts</p>
+                </a>
+            </li>
+            <li>
                 <a class="nav-link" href="#">
                     <span class="material-icons mr-1" style="vertical-align: middle;">person</span>
                     <p>User Profile</p>

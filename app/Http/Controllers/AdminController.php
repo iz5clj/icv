@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Message;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -17,11 +18,13 @@ class AdminController extends Controller
         $laravel  = app();
         $version  = $laravel::VERSION;
 
-        $users = User::count();
+        $users    = User::count();
+        $messages = Message::count();
 
         return view('dashboard', [
-            "version" => $version,
-            "users"   => $users
+            "version"  => $version,
+            "users"    => $users,
+            'messages' => $messages
         ]);
     }
 }

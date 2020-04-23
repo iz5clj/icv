@@ -7,7 +7,7 @@
 
     <style>
         body {
-            background-color: #000;
+            background-color: #2ECC40;
         }
 
         img {
@@ -22,8 +22,8 @@
         <div class="container h-100">
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="text-center">
-                <p><img src="assets/images/sabatinoInfoLogo600x96.png" /></p>
-                <p class="text-white">Please come back soon</p>
+                    <p class="text-white text-uppercase">italian corona virus</p>
+                    <p class="text-white">Please come back soon</p>
             </div>
             </div>
         </div>

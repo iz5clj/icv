@@ -6,7 +6,7 @@
 @section('content')
 
 <div class="row">
-    <div class="col-md-6">
+    <div class="col">
         <div class="card">
             <div class="card-header">
                 <div class="inner" style="border-bottom: 1px solid #2c2c2c;">

@@ -35,6 +35,9 @@ Route::group(
         Route::put('user/{user}', 'UserController@update')->name('userUpdate');
         Route::delete('user/{user}', 'UserController@destroy')->name('userDestroy');
 
+        Route::resource('message', 'MessageController');
+        Route::resource('post', 'PostController');
+
         Route::get('info', 'InfoController@index')->name('info');
     }
 );

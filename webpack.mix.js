@@ -32,6 +32,12 @@ mix.sass('resources/sass/app.scss', 'public/assets/css').version();
 mix.sass('resources/sass/custom.scss', 'public/assets/css').version();
 
 mix.browserSync({
-    proxy: 'l7base.test',
-    open: false
+    proxy: 'icv.test',
+    open: false,
+    notify: {
+        styles: {
+            top: 'auto',
+            bottom: '0'
+        }
+    }
 });
