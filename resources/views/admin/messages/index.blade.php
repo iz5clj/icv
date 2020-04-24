@@ -23,10 +23,11 @@
             <div class="card-body">
 
                 
-                <table class="table table-borderless">
-                    <thead class="thead-dark">
+                <table class="table">
+                    <thead class="thead">
                         <tr>
                             <th scope="col">{{ __('m.name') }}</th>
+                            <th scope="col">{{ __('m.text') }}</th>
                             <th scope="col">{{ __('m.text') }}</th>
                             <th scope="col">{{ __('m.date') }}</th>
                             <th scope="col">{{ __('m.actions') }}</th>
@@ -36,8 +37,9 @@
                         @forelse($messages as $message)
                         <tr>
                             <th scope="row"><a href="{{ route('message.edit', $message->id) }}">{{ $message->name }}</a></th>
-                            <td>{{ $message->text }}</td>
-                            <td>{{ $message->updated }}</td>
+                            <td>{{ $message->text01 }}</td>
+                            <td>{{ $message->text02 }}</td>
+                            <td>{{ $message->updated }} by {{ $message->user->name }}</td>
                             <td>
                                 <form action="{{ route('message.destroy', $message->id) }}" method="post">
                                     @csrf
@@ -48,7 +50,7 @@
                         </tr>
                         @empty
                         <tr>
-                            <th colspan="4">
+                            <th colspan="5">
                                 <p>Non ci sono messagi da listare</p>
                             </th>
                         </tr>

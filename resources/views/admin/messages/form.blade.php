@@ -12,17 +12,29 @@
 </div>
 {{-- end::name --}}
 
-{{-- begin::text --}}
+{{-- begin::text01 --}}
 <div class="form-group">
-    <label class="label-form field-required" for="text">{{ __('m.text label') }}</label>
-    <input type="text" class="form-control @error('text') is-invalid @enderror" name="text" value="{{ old('text') ? old('text') : $message->text }}" />
-    @if($errors->has('text'))
-    <small class="form-text invalid-feedback">{{ $errors->first('text') }}</small>
+    <label class="label-form field-required" for="text01">{{ __('m.text label') }}</label>
+    <input type="text" class="form-control @error('text01') is-invalid @enderror" name="text01" value="{{ old('text01') ? old('text01') : $message->text01 }}" />
+    @if($errors->has('text01'))
+    <small class="form-text invalid-feedback">{{ $errors->first('text01') }}</small>
     @else
     <small class="form-text text-muted">{{ __('m.help text message') }}</small>
     @endif
 </div>
-{{-- end::text --}}
+{{-- end::text01 --}}
+
+{{-- begin::text02 --}}
+<div class="form-group">
+    <label class="label-form field-required" for="text02">{{ __('m.text label') }}</label>
+    <input type="text" class="form-control @error('text02') is-invalid @enderror" name="text02" value="{{ old('text02') ? old('text02') : $message->text02 }}" />
+    @if($errors->has('text02'))
+    <small class="form-text invalid-feedback">{{ $errors->first('text02') }}</small>
+    @else
+    <small class="form-text text-muted">{{ __('m.help text message') }}</small>
+    @endif
+</div>
+{{-- end::text02 --}}
 
 {{-- begin::updated date --}}
 {{-- end::updated date --}}

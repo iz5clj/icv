@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\User;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
@@ -14,7 +15,14 @@ class Message extends Model
     ];
 
     public function getUpdatedAttribute($value) {
-        return Carbon::parse($value)->format('d/m/Y - h:m:s');
+        return Carbon::parse($value)->format('d/m/Y');
+    }
+
+
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 
 }

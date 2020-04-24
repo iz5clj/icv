@@ -9,10 +9,12 @@ class CreateMessagesTable extends Migration {
 	{
 		Schema::create('messages', function(Blueprint $table) {
 			$table->increments('id');
-			$table->timestamps();
 			$table->string('name');
-			$table->string('text');
+			$table->string('text01');
+			$table->string('text02')->nullable();
 			$table->timestamp('updated');
+			$table->unsignedInteger('user_id');
+			$table->timestamps();
 		});
 	}
 

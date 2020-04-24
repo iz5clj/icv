@@ -15,9 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', 'FrontController@index')->name('front-index');
+
 Auth::routes([
-    'verify'   => true,
-    'register' => true
+    'verify'   => false,
+    'register' => false
 ]);
 
 Route::group(
@@ -42,7 +44,7 @@ Route::group(
     }
 );
 
-Route::get('/', function () {
+Route::get('/original-index', function () {
 
     $laravel  = app();
     $version  = $laravel::VERSION;

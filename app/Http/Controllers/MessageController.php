@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Message;
 use App\Post;
+use App\Message;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -17,7 +17,7 @@ class MessageController extends Controller
    */
   public function index()
   {
-    $messages = Message::latest()->get();
+    $messages = Message::latest()->with('user')->get();
 
     return view('admin.messages.index', compact('messages'));
   }
@@ -43,13 +43,15 @@ class MessageController extends Controller
   {
     $this->validate($request, [
       'name' => 'required',
-      'text'  => 'required'
+      'text01'  => 'required'
     ]);
 
     $message          = new Message;
     $message->name    = $request->name;
-    $message->text    = $request->text;
+    $message->text01  = $request->text01;
+    $message->text02  = $request->text02;
     $message->updated = Carbon::now();
+    $message->user_id = auth()->user()->id;
 
     $message->save();
 
@@ -90,12 +92,14 @@ class MessageController extends Controller
   {
     $this->validate($request, [
       'name' => 'required',
-      'text' => 'required'
+      'text01' => 'required'
     ]);
 
     $message->name    = $request->name;
-    $message->text    = $request->text;
+    $message->text01  = $request->text01;
+    $message->text02  = $request->text02;
     $message->updated = Carbon::now();
+    $message->user_id = auth()->user()->id;
 
     $message->save();
 
