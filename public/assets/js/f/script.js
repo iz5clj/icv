@@ -1,0 +1,1 @@
+$(function(){$(".numero").each(function(){$(this).data("count",parseInt($(this).html(),10)),$(this).html("0"),function t(n){var a=parseInt(n.html(),10);a+=250,n.html(++a),a>n.data("count")?n.html(n.data("count")):setTimeout(function(){t(n)},5)}($(this))})});

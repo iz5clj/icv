@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use App\User;
 use App\Message;
 use Illuminate\Http\Request;
@@ -20,11 +21,13 @@ class AdminController extends Controller
 
         $users    = User::count();
         $messages = Message::count();
+        $posts    = Post::count();
 
         return view('dashboard', [
             "version"  => $version,
             "users"    => $users,
-            'messages' => $messages
+            "messages" => $messages,
+            'posts'    => $posts
         ]);
     }
 }

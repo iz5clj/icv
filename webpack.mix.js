@@ -31,6 +31,11 @@ mix.scripts('resources/js/app.js', 'public/assets/js/app.js').version();
 mix.sass('resources/sass/app.scss', 'public/assets/css').version();
 mix.sass('resources/sass/custom.scss', 'public/assets/css').version();
 
+
+mix.sass('resources/sass/f/style.scss', 'public/assets/css/f').version();
+mix.sass('resources/sass/f/custom.scss', 'public/assets/css/f').version();
+mix.scripts('resources/js/f/script.js', 'public/assets/js/f/script.js').version();
+
 mix.browserSync({
     proxy: 'icv.test',
     open: false,

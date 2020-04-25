@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Post;
 use App\Message;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -41,6 +42,11 @@ class User extends Authenticatable
     public function messages()
     {
         return $this->hasMany(Message::class);
+    }
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
     }
 
 }
