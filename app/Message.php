@@ -15,7 +15,8 @@ class Message extends Model
     ];
 
     public function getUpdatedAttribute($value) {
-        return Carbon::parse($value)->format('d/m/Y');
+        // Carbon::setlocale('it');
+        return Carbon::parse($value)->locale('it_IT')->calendar();
     }
 
     public function user()
