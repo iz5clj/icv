@@ -18,4 +18,17 @@ $(function() {
         $(this).html("0");
         count($(this));
     });
+
+    var lightbox = GLightbox({
+        loop: true
+    });
+    var lightboxDescription = GLightbox({
+        selector: "glightbox2"
+    });
+    var lightboxVideo = GLightbox({
+        selector: "glightbox3"
+    });
+    var lightboxInlineIframe = GLightbox({
+        selector: "glightbox4"
+    });
 });

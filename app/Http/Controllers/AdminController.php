@@ -19,15 +19,17 @@ class AdminController extends Controller
         $laravel  = app();
         $version  = $laravel::VERSION;
 
-        $users    = User::count();
-        $messages = Message::count();
-        $posts    = Post::count();
+        $users           = User::count();
+        $messages        = Message::count();
+        $posts           = Post::count();
+        $published_posts = Post::published()->count();
 
         return view('dashboard', [
-            "version"  => $version,
-            "users"    => $users,
-            "messages" => $messages,
-            'posts'    => $posts
+            "version"         => $version,
+            "users"           => $users,
+            "messages"        => $messages,
+            'posts'           => $posts,
+            'published_posts' => $published_posts
         ]);
     }
 }

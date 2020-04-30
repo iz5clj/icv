@@ -43,7 +43,8 @@
                 </div>
             </div>
             <div class="card-body ">
-                <p>We have {{ $posts ?? 'undefined' }} posts.</p>
+                <p>We have {{ $posts ?? 'undefined' }} posts (total).</p>
+                <p>We have {{ $published_posts ?? 'undefined' }} published posts.</p>
             </div>
         </div>
     </div>

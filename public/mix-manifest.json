@@ -1,10 +1,12 @@
 {
-    "/assets/css/app.css": "/assets/css/app.css?id=a75cdc0751dc7eaa9e0c",
+    "/assets/css/app.css": "/assets/css/app.css?id=a632c119c067e9f07ec9",
     "/assets/css/custom.css": "/assets/css/custom.css?id=54e7fb28bf24e5d4cfc2",
-    "/assets/css/f/style.css": "/assets/css/f/style.css?id=c6ce56dfb3ab176fa7a4",
+    "/assets/css/f/style.css": "/assets/css/f/style.css?id=72c65f2690954effba4d",
     "/assets/css/f/custom.css": "/assets/css/f/custom.css?id=5e2aa8c75c60dd11659c",
     "/assets/js/core.js": "/assets/js/core.js?id=9891735eff4aa8d5e4d4",
-    "/assets/js/plugins.js": "/assets/js/plugins.js?id=2a97af33d8eea9555e15",
+    "/assets/js/plugins.js": "/assets/js/plugins.js?id=1605d10ac628b2245a4d",
     "/assets/js/app.js": "/assets/js/app.js?id=eec9cdbea72f5dd20a3f",
-    "/assets/js/f/script.js": "/assets/js/f/script.js?id=604451de1db74aa30621"
+    "/assets/css/f/glightbox.css": "/assets/css/f/glightbox.css?id=a2b3008aaf3ca64f2580",
+    "/assets/js/f/glightbox.js": "/assets/js/f/glightbox.js?id=a02596bc069bd60c6810",
+    "/assets/js/f/script.js": "/assets/js/f/script.js?id=23ac938ce09eb9a24dab"
 }

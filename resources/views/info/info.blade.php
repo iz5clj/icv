@@ -32,6 +32,9 @@
 
             </div>
         </div>
+        <div class="card">
+            {{ phpinfo() }}
+        </div>
     </div>
 </div>
 

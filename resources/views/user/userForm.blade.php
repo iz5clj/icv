@@ -40,7 +40,7 @@
     <div class="col-sm-12 col-md-2 form-group">
         {{-- if you want center horizontal as well add this class: justify-content-center --}}
         <div id="avatar-column" class="d-flex align-items-center">
-            <img src="{{ ($action === 'create') ? "/assets/images/avatar/default.png" : "/assets/images/avatar/$user->avatar" }}" id="v2-img-tag" width="100px" />
+            <img src="{{ ($action === 'create') ? "/avatar/default.png" : "/avatar/$user->avatar" }}" id="v2-img-tag" width="100px" />
         </div>
     </div>
     <div class="col-md-4">

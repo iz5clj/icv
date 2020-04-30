@@ -33,6 +33,8 @@ class InfoController extends Controller
             $list .= $table->tbl_name . ', ' . PHP_EOL;
         }
 
+        $memCache = class_Exists('Memcache') ? 'Yes' : 'No';
+
         $infos = array(
             array(
                 "title" => "Laravel Version",
@@ -61,6 +63,10 @@ class InfoController extends Controller
             array(
                 "title" => "PHP Memory Limit",
                 "value" => ini_get('memory_limit')
+            ),
+            array(
+                "title" => "Memcahed installed?",
+                "value" => $memCache
             ),
             array(
                 "title" => $myDriver,

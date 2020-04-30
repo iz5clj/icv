@@ -18,6 +18,7 @@
 
 {{-- begin :: Styles --}}
 <link href="{{ mix(asset('css/f/style.css')) }}" rel="stylesheet">
+<link href="{{ mix(asset('css/f/glightbox.css')) }}" rel="stylesheet">
 <link href="{{ mix(asset('css/f/custom.css')) }}" rel="stylesheet">
 
 {{-- begin :: icons from https://www.favicon-generator.org/ --}}

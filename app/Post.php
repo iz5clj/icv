@@ -14,6 +14,11 @@ class Post extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'publisher');
+    }
+
+    public function scopePublished($query)
+    {
+        return $query->whereIsPublished(1);
     }
 }

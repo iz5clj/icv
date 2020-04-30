@@ -104,7 +104,6 @@ class MessageController extends Controller
     $message->save();
 
     return redirect()->route('message.index')->with('success', 'Message updated.');
-
   }
 
   /**

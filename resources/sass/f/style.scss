@@ -4,6 +4,10 @@
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
+body {
+    font-family: "Montserrat";
+}
+
 .card-columns {
     @include media-breakpoint-only(xs) {
         column-count: 2;
@@ -17,4 +21,15 @@
     @include media-breakpoint-only(xl) {
         column-count: 6;
     }
+
+    column-gap: 0;
+}
+
+.card-columns .card {
+    margin-bottom: 0;
+}
+
+.card-img {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
