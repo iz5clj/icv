@@ -44,8 +44,7 @@ mix.sass('resources/sass/f/style.scss', 'public/assets/css/f').version();
 mix.styles('node_modules/glightbox/dist/css/glightbox.css', 'public/assets/css/f/glightbox.css').version();
 mix.sass('resources/sass/f/custom.scss', 'public/assets/css/f').version();
 mix.scripts('node_modules/glightbox/dist/js/glightbox.js', 'public/assets/js/f/glightbox.js').version();
-mix.scripts('resources/js/f/script.js', 'public/assets/js/f/script.js').version();
-mix.scripts('resources/js/f/snap-scroll.js', 'public/assets/js/f/snap-scroll.js').version();
+// mix.scripts('resources/js/f/script.js', 'public/assets/js/f/script.js').version();
 
 mix.browserSync({
     proxy: 'icv.test',
