@@ -8,6 +8,12 @@ body {
     font-family: "Montserrat";
 }
 
+footer {
+    background-color: $secondary;
+    min-height: 120px;
+    margin-top: 3rem;
+}
+
 .card-columns {
     @include media-breakpoint-only(xs) {
         column-count: 2;

@@ -42,31 +42,29 @@
     @endif
     </div>
     @if($display_grid)
-    <div class="container mt-5">
-        <div id="grid" class="">
-            <div class="card-columns">
+    <div class="container">
+        <section id="grid">
+            <div class="card-columns pt-2">
                 {{-- begin loop --}}
                 @foreach ($posts as $post)
                 @if($post->type == 1)
                 <div class="card">
                     <a class="glightbox" href="{{ 'uploads/original/' . $post->original }}" data-gallery="gal">
-                        <img class="img-fluid"
-                        @if($post->thumb_img)
+                        <img class="img-fluid" @if($post->thumb_img)
                         src="{{ 'uploads/original/thumb/' . $post->thumb_img }}"
                         @elseif($post->type == 1)
                         src="{{ 'uploads/original/' . $post->original }}"
                         @else
                         src="video.png"
                         @endif
-                        alt="{{ $post->description ? $post->description : 'italian corona virus humor' }}" 
+                        alt="{{ $post->description ? $post->description : 'italian corona virus humor' }}"
                         />
                     </a>
                 </div>
                 @elseif($post->type == 4)
                 <div class="card">
-                    <a href="{{ $post->link }}" class="glightbox" data-gallery="gal">
-                        <img class="img-fluid"
-                        @if($post->thumb_img)
+                    <a class="glightbox" href="{{ $post->link }}" data-gallery="gal">
+                        <img class="img-fluid" @if($post->thumb_img)
                         src="{{ 'uploads/original/thumb/' . $post->thumb_img }}"
                         @else
                         src="video.png"
@@ -79,11 +77,54 @@
                 @endforeach
                 {{-- end loop --}}
             </div>
-        </div>
+        </section>
     </div>
     @endif
 
+    @include('front.partials.footer')
+
     @include('front.partials.javascript')
+
+    <script>
+        $(function() {
+            function count($this) {
+                var current = parseInt($this.html(), 10);
+                current = current + 250; /* Where 50 is increment */
+
+                $this.html(++current);
+                if (current > $this.data("count")) {
+                    $this.html($this.data("count"));
+                } else {
+                    setTimeout(function() {
+                        count($this);
+                    }, 5);
+                }
+            }
+
+            $(".numero").each(function() {
+                $(this).data("count", parseInt($(this).html(), 10));
+                $(this).html("0");
+                count($(this));
+            });
+
+            var lightbox = GLightbox({
+                loop: true
+            });
+            var lightboxDescription = GLightbox({
+                selector: "glightbox2"
+            });
+            var lightboxVideo = GLightbox({
+                selector: "glightbox3"
+            });
+            var lightboxInlineIframe = GLightbox({
+                selector: "glightbox4"
+            });
+
+            $("section").SnapScroll();
+
+        });
+
+    </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159413450-1"></script>

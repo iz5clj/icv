@@ -1,1 +1,1 @@
-$(function(){$(".numero").each(function(){$(this).data("count",parseInt($(this).html(),10)),$(this).html("0"),function t(o){var h=parseInt(o.html(),10);h+=250,o.html(++h),h>o.data("count")?o.html(o.data("count")):setTimeout(function(){t(o)},5)}($(this))});GLightbox({loop:!0}),GLightbox({selector:"glightbox2"}),GLightbox({selector:"glightbox3"}),GLightbox({selector:"glightbox4"})});
+
