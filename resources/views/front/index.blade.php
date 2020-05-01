@@ -33,6 +33,11 @@
     </div>
 
     @if($display_grid)
+    <div class="row justify-content-center">
+        <div class="ridere text-center">
+            <p>Un po di humor</p>
+        </div>
+    </div>
     <a href="#grid" class="btn arrow bounce"></a>
     @endif
     </div>
@@ -42,16 +47,35 @@
             <div class="card-columns">
                 {{-- begin loop --}}
                 @foreach ($posts as $post)
+                @if($post->type == 1)
                 <div class="card">
                     <a class="glightbox" href="{{ 'uploads/original/' . $post->original }}" data-gallery="gal">
-                        <img class="img-fluid" @if($post->type == 1)
+                        <img class="img-fluid"
+                        @if($post->thumb_img)
+                        src="{{ 'uploads/original/thumb/' . $post->thumb_img }}"
+                        @elseif($post->type == 1)
                         src="{{ 'uploads/original/' . $post->original }}"
                         @else
-                        src="default.png"
+                        src="video.png"
                         @endif
-                        alt="{{ $post->description ? $post->description : 'italian corona virus' }}" />
+                        alt="{{ $post->description ? $post->description : 'italian corona virus humor' }}" 
+                        />
                     </a>
                 </div>
+                @elseif($post->type == 4)
+                <div class="card">
+                    <a href="{{ $post->link }}" class="glightbox" data-gallery="gal">
+                        <img class="img-fluid"
+                        @if($post->thumb_img)
+                        src="{{ 'uploads/original/thumb/' . $post->thumb_img }}"
+                        @else
+                        src="video.png"
+                        @endif
+                        alt="{{ $post->description ? $post->description : 'italian coronavirus humor' }}"
+                        />
+                    </a>
+                </div>
+                @endif
                 @endforeach
                 {{-- end loop --}}
             </div>

@@ -16,10 +16,10 @@ body {
         column-count: 3;
     }
     @include media-breakpoint-only(lg) {
-        column-count: 5;
+        column-count: 4;
     }
     @include media-breakpoint-only(xl) {
-        column-count: 6;
+        column-count: 5;
     }
 
     column-gap: 0;
@@ -33,3 +33,79 @@ body {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+
+.card {
+    border: 0;
+    border-radius: 0;
+}
+
+.text-xs-left {
+    text-align: left !important;
+}
+
+.text-xs-right {
+    text-align: right !important;
+}
+
+.text-xs-center {
+    text-align: center !important;
+}
+
+.text-xs-justify {
+    text-align: justify !important;
+}
+
+@media (min-width: 576px) {
+    .text-sm-left {
+        text-align: left !important;
+    }
+
+    .text-sm-right {
+        text-align: right !important;
+    }
+
+    .text-sm-center {
+        text-align: center !important;
+    }
+
+    .text-sm-justify {
+        text-align: justify !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .text-md-left {
+        text-align: left !important;
+    }
+
+    .text-md-right {
+        text-align: right !important;
+    }
+
+    .text-md-center {
+        text-align: center !important;
+    }
+
+    .text-md-justify {
+        text-align: justify !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .text-lg-left {
+        text-align: left !important;
+    }
+
+    .text-lg-right {
+        text-align: right !important;
+    }
+
+    .text-lg-center {
+        text-align: center !important;
+    }
+
+    .text-lg-justify {
+        text-align: justify !important;
+    }
+}
+

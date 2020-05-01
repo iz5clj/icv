@@ -13,7 +13,7 @@
 {{-- begin::description --}}
 <div class="form-group">
     <label class="label-form" for="description">{{ __('m.description') }}</label>
-    <input type="text" class="form-control @error('description') is-invalid @enderror" name="description" value="{{ old('description') ? old('description') : $post->description }}" autofocus />
+    <input type="text" class="form-control name="description" value="{{ old('description') ? old('description') : $post->description }}" autofocus />
     @if($errors->has('description'))
     <small class="form-text invalid-feedback">{{ $errors->first('description') }}</small>
     @else
@@ -41,7 +41,7 @@
         {{-- begin::link to vimeo or youtube --}}
         <div class="form-group">
             <label class="label-form" for="link">{{ __('m.link') }}</label>
-            <input type="text" class="form-control name="link" value="{{ old('link') ? old('link') : $post->link }}"/>
+            <input type="text" class="form-control" name="link" value="{{ old('link') ? old('link') : $post->link }}"/>
             <small class="form-text text-muted">{{ __('m.help link') }}</small>
         </div>
         {{-- end::link to vimeo or youtube --}}

@@ -23,7 +23,7 @@
                 <table class="table">
                     <thead class="thead">
                         <tr>
-                            <th scope="col">{{ __('m.post description') }}</th>
+                            <th scope="col">{{ __('m.post thumb') }}</th>
                             <th scope="col">{{ __('m.post original') }}</th>
                             <th scope="col">{{ __('m.post link') }}</th>
                             <th scope="col">{{ __('m.type') }}</th>
@@ -34,7 +34,14 @@
                     <tbody>
                         @forelse($posts as $post)
                         <tr>
-                            <th scope="row">{{ $post->description }}</th>
+                            <th scope="row">
+                                @if($post->thumb_img)
+                                <img src="{{  '/uploads/original/thumb/' . $post->thumb_img }}" class="img-fluid img-thumbnail mh-60"</th>
+                                @elseif($post->type == 1)
+                                <img src="{{  '/uploads/original/' . $post->original }}" class="img-fluid img-thumbnail mh-60"</th>
+                                @else
+                                <img src="/video.png" class="img-fluid img-thumbnail mh-60"</th>
+                                @endif
                             <td>{{ $post->original }}</td>
                             <td>{{ $post->link }}</td>
                             <td><span class="material-icons md-24">
