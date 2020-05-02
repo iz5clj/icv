@@ -8,7 +8,7 @@ footer {
 .upload-btn-wrapper {
     position: relative;
     overflow: hidden;
-    display: inline-block;
+    display: block;
 }
 
 .btn-file-upload {
@@ -40,5 +40,5 @@ footer {
 }
 
 #btn-file-upload {
-    margin-top: -41px;
+    // margin-top: -41px;
 }
