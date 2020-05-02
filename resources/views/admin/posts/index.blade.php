@@ -14,7 +14,7 @@
                     <div class="float-right">
                         <a class="btn btn-primary btn-sm" href="{{ route('post.create') }}" role="button">
                             <span class="material-icons md-24 align-middle font-weight-bold mr-2">add</span>
-                            Add new post
+                            {{ __('m.add new post') }}
                         </a>
                     </div>
                 </div>
@@ -26,8 +26,8 @@
                             <th scope="col">{{ __('m.post thumb') }}</th>
                             <th scope="col">{{ __('m.post original') }}</th>
                             <th scope="col">{{ __('m.post link') }}</th>
-                            <th scope="col">{{ __('m.type') }}</th>
-                            <th scope="col">{{ __('m.is published') }}</th>
+                            <th scope="col">{{ __('m.post type') }}</th>
+                            <th scope="col">{{ __('m.post is published') }}</th>
                             <th scope="col">{{ __('m.actions') }}</th>
                         </tr>
                     </thead>
@@ -74,9 +74,15 @@
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger btn-sm">{{ __('m.destroy') }}</button>
                                 </form>
-                                <a href="{{ route('post.edit', $post->id) }}">
-                                    <button type="submit" class="btn btn-primary btn-sm">{{ __('m.modify') }}</button>
+                                @if($post->is_published)
+                                <a href="{{ route('post.unpublish', $post->id) }}">
+                                    <button type="submit" class="btn btn-primary btn-sm">{{ __('m.unpublish') }}</button>
                                 </a>
+                                @else
+                                <a href="{{ route('post.publish', $post->id) }}">
+                                    <button type="submit" class="btn btn-secondary btn-sm">{{ __('m.publish') }}</button>
+                                </a>
+                                @endif
                             </td>
                         </tr>
                         @empty

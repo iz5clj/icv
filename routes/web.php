@@ -40,6 +40,8 @@ Route::group(
 
         Route::resource('message', 'MessageController');
         Route::resource('post', 'PostController');
+        Route::get('post/publish/{post}', 'PostController@publish')->name('post.publish');
+        Route::get('post/unpublish/{post}', 'PostController@unpublish')->name('post.unpublish');
 
         Route::get('info', 'InfoController@index')->name('info');
     }

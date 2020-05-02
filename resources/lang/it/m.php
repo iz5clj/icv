@@ -23,5 +23,17 @@ return [
     'help public file upload' => 'I files permessi sono quelli con estensione jpg, png, bmp o gif. Massimo 2Mb',
     'choose file'             => 'Scegli il file che vuoi inviarci.',
     'label send file'         => 'Partecipa anche tu.',
-    'thank you upload file'   => 'Grazie per il tuo contributo. Il file sarà pubblicato a breve.'
+    'thank you upload file'   => 'Grazie per il tuo contributo. Il file sarà pubblicato a breve.',
+    'post added'              => 'Il post è stato inserito correttamente.',
+    'post deleted'            => 'Il post è stato cancellato.',
+    'post thumb'              => 'Miniatura',
+    'post original'           => 'Originale',
+    'post link'               => 'Link',
+    'post type'               => 'Tipo',
+    'post is published'       => 'Pubblicato?',
+    'destroy'                 => 'Eliminare',
+    'publish'                 => 'Pubblicare',
+    'unpublish'               => 'Togliere',
+    'add new post'            => 'Aggiungi uno nuovo',
+    'actions'                 => 'Azioni',
 ];

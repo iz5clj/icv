@@ -105,9 +105,9 @@ class PostController extends Controller
         $post->save();
 
         if ($request->has('submitAndAdd')) {
-            return back()->with('success', 'Post added correctly');
+            return back()->with('success', __('m.post added'));
         }
-        return redirect()->route('post.index')->with('success', 'Post added correctly');
+        return redirect()->route('post.index')->with('success', __('m.post added'));
     }
 
     /**
@@ -142,6 +142,24 @@ class PostController extends Controller
     public function update(StorePostsRequest $request, Post $post)
     {
         return $post;
+
+    }
+
+    public function publish(Post $post)
+    {
+        $post->is_published = 1;
+        $post->save();
+
+        return redirect()->back();
+
+    }
+
+    public function unpublish(Post $post)
+    {
+        $post->is_published = 0;
+        $post->save();
+
+        return redirect()->back();
 
     }
 

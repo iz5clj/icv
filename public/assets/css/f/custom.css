@@ -1,1 +1,76 @@
-.numero{font-size:3rem;font-weight:900}.data,.ridere,.text02{font-size:1.5rem;text-transform:uppercase;margin-top:-1rem}@-webkit-keyframes bounce{0%,20%,50%,80%,to{transform:translateY(0)}40%{transform:translateY(-30px)}60%{transform:translateY(-15px)}}@keyframes bounce{0%,20%,50%,80%,to{transform:translateY(0)}40%{transform:translateY(-30px)}60%{transform:translateY(-15px)}}.arrow{position:absolute;bottom:1rem;left:50%;margin-left:-20px;width:60px;height:60px;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHdpZHRoPSIyNCI+PHBhdGggZD0iTTcuNDEgOC41OUwxMiAxMy4xN2w0LjU5LTQuNThMMTggMTBsLTYgNi02LTYgMS40MS0xLjQxeiIvPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMFYweiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==);background-size:contain;transform:rotate(90deg)}.bounce{-webkit-animation:bounce 2s infinite;animation:bounce 2s infinite}.ridere{position:absolute;bottom:4rem}.vh{height:100vh}.mw15{min-width:15rem}.chiusura{float:right;padding:0 5px}
+.numero {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.text02,
+.data,
+.ridere {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-top: -1rem;
+}
+
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-30px);
+  }
+
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-30px);
+  }
+
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.arrow {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  margin-left: -20px;
+  width: 60px;
+  height: 60px;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNNy40MSA4LjU5TDEyIDEzLjE3bDQuNTktNC41OEwxOCAxMGwtNiA2LTYtNiAxLjQxLTEuNDF6Ii8+PHBhdGggZD0iTTAgMGgyNHYyNEgwVjB6IiBmaWxsPSJub25lIi8+PC9zdmc+);
+  background-size: contain;
+  transform: rotate(90deg);
+}
+
+.bounce {
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+.ridere {
+  position: absolute;
+  bottom: 4rem;
+}
+
+.vh {
+  height: 100vh;
+}
+
+.mw15 {
+  min-width: 15rem;
+}
+
+.chiusura {
+  float: right;
+  padding: 0 5px;
+}
+
