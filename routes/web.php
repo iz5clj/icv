@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'FrontController@index')->name('front-index');
+Route::post('/upload', 'FrontController@upload')->name('front-upload');
 
 Auth::routes([
     'verify'   => false,

@@ -4,14 +4,10 @@
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
+@import "footer";
+
 body {
     font-family: "Montserrat";
-}
-
-footer {
-    background-color: $secondary;
-    min-height: 120px;
-    margin-top: 3rem;
 }
 
 .card-columns {

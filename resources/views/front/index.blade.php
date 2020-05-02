@@ -8,6 +8,14 @@
 </head>
 
 <body>
+    @if (session('success'))
+    <div class="session-message alert alert-success">
+        <button type="button" class="chiusura btn btn-success">
+            {{ __('m.close in') }} <span class="count_number">5</span> {{ __('m.seconds') }}
+        </button>
+        {{ session('success') }}
+    </div>
+    @endif
     <div class="container vh">
         <div class="row h-100 flex-column justify-content-center align-items-center">
             <div class="row">
@@ -110,6 +118,24 @@
             var lightbox = GLightbox({
                 loop: true
             });
+
+            $("#michel").change(function() {
+                var file = this.files[0];
+                $("#fichier").html(file.name);
+            });
+
+            
+            var counter = 5;
+            setInterval(function() {
+                counter--;
+                if (counter >= 0) {
+                    $('.count_number').html(counter);
+                }
+                if (counter === 0) {
+                    clearInterval(counter);
+                    $(".session-message").fadeOut();
+                }
+            }, 1000);
 
         });
 
